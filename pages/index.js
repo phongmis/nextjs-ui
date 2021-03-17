@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-import Nav from "../components/nav";
+// import Nav from "../components/nav";
+import { NavLink } from "reactstrap";
 
 const Home = () => (
   <div>
@@ -9,20 +10,40 @@ const Home = () => (
       <title>Home</title>
     </Head>
 
-    <Nav />
+    {/* <Nav /> */}
 
     <div className="hero">
-      <h1 className="title">Welcome to Asketon UI! </h1>
+      <h1 className="title">Welcome to A System Skeleton UI! </h1>
       <p className="description">
         From gettings started to influent awesome UI with by Phong Nguyen
       </p>
     </div>
-
+    <div className="row">
+      <div className="card">
+        <NavLink href="/ui">
+          <img alt="Bootrap" src="/asserts/bootstrap-solid.svg" />
+        </NavLink>
+      </div>
+    </div>
+    <div className="row">
+      <div className="card">
+        <NavLink href="/ui/ant-design">
+          <img
+            src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
+            alt="Ant Design"
+          />
+        </NavLink>
+      </div>
+    </div>
+    <div className="row">
+      <div className="card">....</div>
+    </div>
     <style jsx>{`
       .hero {
         width: 100%;
         color: #333;
       }
+
       .title {
         margin: 0;
         width: 100%;
